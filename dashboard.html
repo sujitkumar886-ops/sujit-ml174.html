@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>Student Attendance System</h1>
+
+        <p>Teacher Dashboard</p>
+
+
+        <!-- Statistics -->
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h2 id="totalStudents">0</h2>
+                <p>Total Students</p>
+            </div>
+
+
+            <div class="stat-card">
+                <h2 id="presentStudents">0</h2>
+                <p>Present</p>
+            </div>
+
+
+            <div class="stat-card">
+                <h2 id="absentStudents">0</h2>
+                <p>Absent</p>
+            </div>
+
+
+            <div class="stat-card">
+                <h2 id="attendancePercentage">0%</h2>
+                <p>Attendance</p>
+            </div>
+
+        </div>
+
+
+        <!-- Menu -->
+
+        <div class="menu">
+
+            <div class="box"
+                 onclick="location.href='students.html'">
+
+                <h2>👨‍🎓</h2>
+                <h3>Add Student</h3>
+
+            </div>
+
+
+            <div class="box"
+                 onclick="location.href='attendance.html'">
+
+                <h2>✅</h2>
+                <h3>Mark Attendance</h3>
+
+            </div>
+
+
+            <div class="box"
+                 onclick="location.href='records.html'">
+
+                <h2>📋</h2>
+                <h3>Attendance Record</h3>
+                <p>View Attendance Records</p>
+
+            </div>
+
+
+            <div class="box"
+                 onclick="location.href='index.html'">
+
+                <h2>🚪</h2>
+                <h3>Logout</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

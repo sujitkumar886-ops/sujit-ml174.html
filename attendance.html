@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mark Attendance</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="attendance-page">
+
+    <h1>✅ Mark Attendance</h1>
+    <p>Mark today's student attendance</p>
+
+    <div class="date-box">
+        <label>Select Date:</label>
+        <input type="date" id="attendanceDate">
+    </div>
+
+    <div class="attendance-list">
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="attendanceTable">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <br>
+
+    <button onclick="saveAttendance()">
+        💾 Save Attendance
+    </button>
+
+    <br><br>
+
+    <button onclick="window.location.href='dashboard.html'">
+        ← Back to Dashboard
+    </button>
+
+</div>
+
+<script src="script.js"></script>
+<div class="attendance-container">
+
+    <h2>Student Attendance</h2>
+
+    <p>
+        Date: <span id="today"></span>
+    </p>
+
+    <div class="attendance-buttons">
+        <button onclick="selectAllStudents()">
+            Select All
+        </button>
+
+        <button onclick="markSelectedPresent()" class="present-btn">
+            Mark Selected Present
+        </button>
+
+        <button onclick="markAllAbsent()" class="absent-btn">
+            Mark All Absent
+        </button>
+    </div>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Select</th>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Class</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody id="attendanceTableBody">
+        </tbody>
+
+    </table>
+
+</div>
+
+<script src="attendance.js"></script>
+
+<script>
+    document.getElementById("today").innerText =
+        new Date().toLocaleDateString();
+</script>
+
+</body>
+</html>
